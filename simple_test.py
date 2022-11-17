@@ -3,7 +3,7 @@ import torch
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-from MAE.util import get_inpainting_metrics
+from MAE.util import misc
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
@@ -102,7 +102,7 @@ def main(args):
 	print('Model loaded.')
 
 	torch.manual_seed(2)
-	run_one_image(img, model_mae)
+	run_one_image(img, mask, model_mae)
 
 if __name__ == '__main__':
     main(argparser())
