@@ -98,6 +98,7 @@ def main(args):
 	mask = np.array(mask) / 255.
 
 	#chkpt_dir = 'pretrained/mae_pretrain_vit_large.pth'
+	chkpt_dir = args.chkpt
 	model_mae = prepare_model(args.chkpt, random_mask=False, finetune=False)
 	print('Model loaded.')
 
